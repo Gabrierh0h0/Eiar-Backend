@@ -23,11 +23,9 @@ export class RegisterDto {
 
   @IsEmail({}, { message: 'Correo inválido' })
   @IsNotEmpty({ message: 'El correo es requerido' })
-  // Cambia el dominio si tu institución usa otro
   @Matches(/@eia\.edu\.co$/i, { message: 'Debes usar tu correo institucional (@eia.edu.co)' })
   email: string;
 
-  // Si manejas IDs (UUID/num), me dices y lo ajusto a IsUUID/IsInt
   @IsString({ message: 'La carrera debe ser texto' })
   @IsNotEmpty({ message: 'La carrera es requerida' })
   career: string;

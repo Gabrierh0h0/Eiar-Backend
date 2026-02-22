@@ -22,8 +22,8 @@ export class FirebaseService implements OnModuleInit {
   get auth() {
     return this.app.auth();
   }
-    get db() {
-      return this.app.firestore();
-    }
+  get db() {
+    return this.app.firestore();
+  }
 
 }

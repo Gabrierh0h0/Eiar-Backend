@@ -15,6 +15,7 @@ export class AuthController {
     @Post('register')
   @UsePipes(new ValidationPipe({ whitelist: true, forbidNonWhitelisted: true }))
   async register(@Body() registerDto: RegisterDto) {
+    console.log('REGISTER BODY:', registerDto);
     return this.authService.register(registerDto);
   }
 }
